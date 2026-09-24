@@ -1,5 +1,5 @@
-# bsci_fig_it
-Bsci_fig_it is a scientific plotting toolkit organized by chart type: the paper's Fig3–Fig10 code split into 16 standalone modules (survival, ROC, forest, heatmap, dimred...), one CLI that auto-detects GEO/TCGA/expression/single-cell data and outputs figures, tables and reports.
+# bSCI_fig_it
+bSCI_fig_it is a scientific plotting toolkit organized by chart type: the paper's Fig3–Fig10 code split into 16 standalone modules (survival, ROC, forest, heatmap, dimred...), one CLI that auto-detects GEO/TCGA/expression/single-cell data and outputs figures, tables and reports.
 
 ## 1. 目录结构
 
