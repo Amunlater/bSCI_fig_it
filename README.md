@@ -44,19 +44,19 @@ figIndividual/
 
 ```powershell
 # 进入目录
-cd F:\RProject\figures\figIndividual
+cd \targetfile
 
 # ① 随机数据演示（无需任何数据）
 python example.py
 
 # ② 自动识别数据集并自动选择能画的图
-python run_individual.py "F:\RProject\GSE\GSE222315_RAW" -o .\output
+python run_individual.py "\targetfile\GSE_RAW" -o .\output
 
 # ③ 只画指定类型
-python run_individual.py "D:\data\TCGA_BLCA" -o .\output --charts survival,roc,bar
+python run_individual.py "\outputfile\data\TCGA_BLCA" -o .\output --charts survival,roc,bar
 
 # ④ 画全部类型（缺失字段用模拟值回填）
-python run_individual.py "D:\data\GSE39582" -o .\output --charts all
+python run_individual.py "\outputfile\data\GSE39582" -o .\output --charts all
 
 # ⑤ 查看所有图表类型
 python run_individual.py --list-charts
@@ -146,13 +146,13 @@ output/
 ## 7. 作为库调用
 
 ```python
-import sys; sys.path.insert(0, r"F:\RProject\figures\figIndividual")
+import sys; sys.path.insert(0, r"\targetfile\figIndividual")
 from pipeline import run, available_charts
 from simulate import simulate_paper_data
 from data_interface import PaperData
 
 # 方式一：直接用随机数据跑全部图
-run(demo=True, out_dir=r"F:\RProject\figures\figIndividual\output")
+run(demo=True, out_dir=r"\targetfile\figIndividual\output")
 
 # 方式二：自己填数据后只画两张
 d = PaperData()
